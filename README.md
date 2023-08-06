@@ -31,7 +31,7 @@ All the dots
 
 ## 问题2：深度学习（30）
 
-### 2.1 计算机视觉
+### 2.1 CV: 降纬预处理
 
 尝试使用PAC对图片进行降纬，后使用卷积神经网络的AlexNet架构进行识别，其中激活函数自己确定
 
@@ -43,33 +43,29 @@ All the dots
 4. 设计更好的模型可以使用在28*28的模型中，对比0，1，2，3四种模型效果 （2）
 5. 前后的图片可视化处理 （2）
 
-### 2.2 自然语言处理
+### 2.2 NLP: 投诉情绪分析
 
 （5） 去除语气词，给出词云图
 
 （5）利用pre-train的权重来对时刻表相关搜索进行情感分析
 
-### 2.3 对抗生成网络
+### 2.3 GAN: 生成动漫头像
 
-（3） 尝试写出baseline model
+（3）尝试写出baseline model，写出DCGAN的训练过程
 
-（4）利用下列模型修改baseline
+（3）尝试观察得到model collapse的方法
 
-WGAN
+并写出文献给出常见的解决方法
 
-[](https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/wgan)
+（4）利用下列模型修改baseline，对模型进行一些调整
 
-WGAN-GP
+[WGAN](https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/wgan)
 
-[](https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/wgan_gp)
+[WGAN-GP](https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/wgan_gp)
 
 LSGAN
 
 SNGAN
-
-（3）尝试观察得到model collapse的方法
-
-并利用文献给出常见的解决方法
 
 ## 问题3：强化学习（30）
 
