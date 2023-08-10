@@ -73,12 +73,13 @@ SNGAN
 
 （10） 阅读下列论文，总结DQN的不同trick
 
-### 3.2 Baseline
-
-（10）给下列baseline增加CNN模块
-
+### 3.2 基于强化学习的车辆行为决策 Baseline
+（10）下列给出Highway-env的DQN网络的框架，请在其中增加对应的CNN模块
+同时对比不同CNN的框架来找到最好的结果
 [GitHub - Farama-Foundation/HighwayEnv: A minimalist environment for decision-making in autonomous driving](https://github.com/Farama-Foundation/HighwayEnv/tree/master)
 
-### 3.3 提升
+### 3.3 环境修改
+在强化学习算法中已经有成功的开源库Stable- baseline3，同时一些优秀的环境，我们可以尝试修改环境来完成自己的研究
+现在要求您对环境中增加障碍物来实现车辆智能化的行为决策。
 
-（10）找到最好的方法，写出你的训练过程伪代码
+
