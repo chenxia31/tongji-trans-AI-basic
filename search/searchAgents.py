@@ -282,10 +282,10 @@ class CornersProblem(search.SearchProblem):
         # in initializing the problem
         "**********************"
         "*                    *"
-        "*** YOUR CODE HERE ***"
+        "*** 第三问需要编程的地方 ***"
         "*                    *"
         "**********************"
-        self.startingFood = tuple([0] * len(self.corners))
+ 
 
     def getStartState(self):
         """
@@ -293,10 +293,10 @@ class CornersProblem(search.SearchProblem):
         """
         "**********************"
         "*                    *"
-        "*** YOUR CODE HERE ***"
+        "*** 第三问需要编程的地方 ***"
         "*                    *"
         "**********************"
-        return (self.startingPosition, self.startingFood)
+
 
     def isGoalState(self, state: Any):
         """
@@ -304,10 +304,9 @@ class CornersProblem(search.SearchProblem):
         """
         "**********************"
         "*                    *"
-        "*** YOUR CODE HERE ***"
+        "*** 第三问需要编程的地方 ***"
         "*                    *"
         "**********************"
-        return sum(state[1]) == len(self.corners)
 
     def getSuccessors(self, state: Any):
         """
@@ -329,19 +328,11 @@ class CornersProblem(search.SearchProblem):
             #   nextx, nexty = int(x + dx), int(y + dy)
             #   hitsWall = self.walls[nextx][nexty]
 
-            "*** YOUR CODE HERE ***"
-            x, y = state[0]  # 获取Pacman所在位置
-            dx, dy = Actions.directionToVector(action)  # 位置增量
-            nextx, nexty = int(x + dx), int(y + dy)  # 改变后的位置
-            hitsWall = self.walls[nextx][nexty]  # 是否撞墙
-            if not hitsWall:
-                location = (nextx, nexty)  # 记录改变后的位置
-                foodEaten = list(state[1])  # 记录原来的豆豆状态
-                if location in self.corners:  # 如果到了角落
-                    index = self.corners.index(location)  # 记录吃掉的豆豆下标
-                    foodEaten[index] = 1  # 改变豆豆状态
-                successor = ((location, tuple(foodEaten)), action, 1)  # 保存这个后继结点
-                successors.append(successor)  # 拓展后继结点
+            "**********************"
+            "*                    *"
+            "*** 第三问需要编程的地方 ***"
+            "*                    *"
+            "**********************"
 
         self._expanded += 1 # DO NOT CHANGE
         return successors
