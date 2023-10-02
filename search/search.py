@@ -75,64 +75,21 @@ def depthFirstSearch(problem: SearchProblem):
     print("Is the start a goal?", problem.isGoalState(problem.getStartState())) 
     print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
-    "*** 需要编程的地方 ***"
-    initState = problem.getStartState()
-    track = []
-    stack = util.Stack()
-    stack.push((initState,[]))
-    while not stack.isEmpty():
-        state,path = stack.pop()
-        track.append(state)
-        if problem.isGoalState(state):
-            return path 
-        for successor in problem.getSuccessors(state):
-            tempState = successor[0]
-            tempAction = successor[1]
-            tempCost = successor[2]
-            if tempState not in track:
-                stack.push((tempState,path+[tempAction]))
+    "*** 问题2需要修改的地方 ***"
     util.raiseNotDefined()
 
 
 def breadthFirstSearch(problem: SearchProblem):
     """首先搜索搜索树中最浅的节点。"""
-    initState = problem.getStartState()
-    track = []
-    queue = util.Queue()
 
-    queue.push((initState,[]))
-    while not queue.isEmpty():
-        state,path = queue.pop()
-        track.append(state)
-        if problem.isGoalState(state):
-            return path 
-        for successor in problem.getSuccessors(state):
-            tempState = successor[0]
-            tempAction = successor[1]
-            tempCost = successor[2]
-            if tempState not in track:
-                queue.push((tempState,path+[tempAction]))
+    "*** 问题2需要编程的地方 ***"
         
     util.raiseNotDefined()
 
 def uniformCostSearch(problem: SearchProblem):
     """首先搜索总成本最低的节点"""
-    "*** 需要编程的地方 ***"
-    initState = problem.getStartState()
-    track = []
-    priorityQueue = util.PriorityQueue()
-    priorityQueue.push((initState,[]),0)
-    while not priorityQueue.isEmpty():
-        state,path = priorityQueue.pop()
-        track.append(state)
-        if problem.isGoalState(state):
-            return path 
-        for successor in problem.getSuccessors(state):
-            tempState = successor[0]
-            tempAction = successor[1]
-            tempCost = successor[2]
-            if tempState not in track:
-                priorityQueue.update((tempState,path+[tempAction]),tempCost)
+    "*** 问题2需要编程的地方 ***"
+
     util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
@@ -143,22 +100,7 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic):
     """首先搜索合并成本和启发式最低的节点。首先，搜索合并成本和启发式最低的节点。"""
-    "*** 需要编程的地方 ***"
-    initState = problem.getStartState()
-    track = []
-    priorityQueue = util.PriorityQueue()
-    priorityQueue.push((initState,[]),0+heuristic(initState,problem))
-    while not priorityQueue.isEmpty():
-        state,path = priorityQueue.pop()
-        track.append(state)
-        if problem.isGoalState(state):
-            return path 
-        for successor in problem.getSuccessors(state):
-            tempState = successor[0]
-            tempAction = successor[1]
-            tempCost = successor[2]
-            if tempState not in track:
-                priorityQueue.update((tempState,path+[tempAction]),heuristic(tempState,problem))
+    "*** 问题2需要编程的地方 ***"
 
 
 # Abbreviations
