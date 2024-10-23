@@ -67,29 +67,49 @@ def tinyMazeSearch(problem):
 
 def depthFirstSearch(problem: SearchProblem):
     """
-    首先搜索搜索树中最深的节点。
-    您的搜索算法需要返回一个达到目标的操作列表。确保实现图形搜索算法。
+    DFS 搜索算法实现
     
     要开始，您可能想尝试其中一些简单的命令来了解正在传递的搜索问题：
     print("Start:", problem.getStartState()) 
     print("Is the start a goal?", problem.isGoalState(problem.getStartState())) 
     print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
-    "*** 问题2需要修改的地方 ***"
+    "NOTE *** 问题2开始编程的地方 ***"
+    # 问题2: 实现深度优先搜索算法
+    temp = problem.getStartState()
+    found = []
+    fringe = util.Queue()
+    fringe.push((temp,[]))
+    while not fringe.isEmpty():
+        temp, path = fringe.pop()
+        if problem.isGoalState(temp):
+            return path
+        if not temp in found:
+            found.append(temp)
+            for child in problem.getSuccessors(temp):
+                if child[0] not in found:
+                    fringe.push((child[0], path + [child[1]]))
+    "*** 问题2结束编程的地方 ***"
     util.raiseNotDefined()
 
 
 def breadthFirstSearch(problem: SearchProblem):
-    """首先搜索搜索树中最浅的节点。"""
+    """
+    BFS 搜索算法实现
+    """
 
-    "*** 问题2需要编程的地方 ***"
-        
+    "NOTE *** 问题2开始编程的地方 ***"
+
+    "*** 问题2结束编程的地方 ***"
     util.raiseNotDefined()
 
 def uniformCostSearch(problem: SearchProblem):
-    """首先搜索总成本最低的节点"""
-    "*** 问题2需要编程的地方 ***"
+    """
+    UCS 搜索算法实现
+    """
+    "NOTE *** 问题2开始编程的地方 ***"
 
+    "*** 问题2结束编程的地方 ***"
     util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
@@ -99,8 +119,13 @@ def nullHeuristic(state, problem=None):
     return 0
 
 def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic):
-    """首先搜索合并成本和启发式最低的节点。首先，搜索合并成本和启发式最低的节点。"""
-    "*** 问题2需要编程的地方 ***"
+    """
+    A* 搜索算法实现
+    """
+    "NOTE *** 问题2开始编程的地方 ***"
+
+    "*** 问题2结束编程的地方 ***"
+    util.raiseNotDefined()
 
 
 # Abbreviations
